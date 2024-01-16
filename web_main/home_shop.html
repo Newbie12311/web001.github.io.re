@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page_Shop</title>
+    <link rel="icon" href="coding.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        .pa1{
+            text-align: center;
+        }
+        .bt01{
+            margin-bottom: px;
+            border: 2px solid black;
+            border-radius: 12px ;
+        }
+        .search{
+            position: relative;
+            box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+        }
+        .search input{
+            height: 60px;
+            text-indent: 25px;
+            border: 2px solid #d6d4d4;
+        }
+        .search input:focus{
+            box-shadow: none;
+            border: 2px solid rgb(20, 20, 23);
+        }
+        .search .fa-search{
+            position: absolute;
+            top: 20px;
+            left: 16px;
+        }
+        .search button{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            height: 50px;
+            width: 110px;
+            background: rgb(16, 16, 24);
+        }
+    </style>
+</head>
+<body style="background-color: rgb(23, 23, 23);">
+    <div class = "container-fulid bg-dark">
+        <div class = "">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <h5 class="text-white h4">Computer shop</h5>
+              <span class="text-muted">
+                <div class="list-group bg-dark">
+                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+                    menu
+                  </a>
+                  <a href="#" class="list-group-item list-group-item-action" onclick = "get1()">CPU_product</a>
+                  <a href="#" class="list-group-item list-group-item-action" onclick="say1()">Graphic_card_product coming soon</a>
+                  <a href="#" class="list-group-item list-group-item-action" onclick="say1()">Monitor_product coming soon</a>
+                  <a href="#" class="list-group-item list-group-item-action" tabindex="-1" aria-disabled="true" onclick="say1()">Contact_the_admin</a>
+                </div>
+              </span>
+              <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                show data 
+              </button>
+              
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasLabel">Data_Canva</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <iframe src="https://docs.google.com/spreadsheets/d/1iXrcsXn92rFa9D0gYJCmqtQXj6_c7ZZeoRGEHOXU5WE/edit?usp=sharing" frameborder="0"  height="500" width="500"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+          </nav>
+        </div>
+    </div><br>
+    <div class = "container">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+        <div class="carousel-inner" style="border: 1px solid white;border-radius: 6px ;">
+            <div id="Indicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#Indicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#Indicators" data-slide-to="1"></li>
+                  <li data-target="#Indicators" data-slide-to="2"></li>
+                  <li data-target="#Indicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-25" src="Photo\A0154466OK_BIG_2.webp" alt="1" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>CPU001</h5>
+                        <p>Buy 4000 Bant</p>
+                        <button type="button" class = "bt01" onclick="say1()">Buy</button>
+                    </div>
+                  </div>
+                <div class="carousel-item">
+                    <img class="d-block w-25" src="https://img.advice.co.th/images_nas/pic_product4/A0155016/A0155016OK_BIG_2.jpg" alt="2" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>CPU</h5>
+                        <p>Buy 4000 Bant</p>
+                        <button type="button" class = "bt01"  onclick="say1()">Buy</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-25 " src="Photo\A0154466OK_BIG_3 (1).webp" alt="3" >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>CPU</h5>
+                        <p>Buy 4000 Bant</p>
+                        <button type="button" class = "bt01"  onclick="say1()">Buy</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-25" src="Photo\CPU\saw.jpg" alt="4">
+                    <div class="carousel-caption d-none d-md-block" >
+                        <h5>Saw good man</h5>
+                        <p>Buy 40000 Bant</p>
+                        <button type="button" class = "bt01 "  onclick="say1()" >Buy</button>
+                    </div>
+                </div>
+                <a class="carousel-control-next" href="" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"  onclick="say1()">Next</span>
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div><br>
+    <div class = "container-fulid" style="background-color:  rgb(23, 23, 23); border-top : 1px solid white;"><br>
+        <div class="row height d-flex justify-content-center align-items-center">
+            <div class="col-md-8">
+              <div class="search">
+                <input type="text" class="form-control" placeholder="search">
+                <button class="btn btn-primary" onclick="say1()">Search</button>
+              </div>
+            </div>
+        </div><br>
+        <div class = "container" >
+            <div>
+                <div id = "fx1">
+                    <div class="row justify-content-center flex-lg-row">
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                          <div class="card" style="width: 260px; height : 300;">
+                            <img class="card-img-top w-75" src="Photo\CPU\Ryzen 9 7950X.jpg" alt="img">
+                            <div class="card-body">
+                              <h5 class="card-title">Ryzen 9 7950X<br>(18,000 Baht)</h5>
+                              <p class="card-text">use code ("Ryzen9-7950X") -25%</p>
+                              <p class="card-text">
+                                <details>
+                                  <summary>รายละเอียดสินค้า</summary>
+                                  <p>AMD Ryzen 9 7950X เป็นโปรเซสเซอร์เดสก์ท็อประดับไฮเอนด์ที่เปิดตัวในเดือนมกราคม พ.ศ. 2567 โดยใช้สถาปัตยกรรม Zen 4 บนกระบวนการผลิต 5 นาโนเมตร โปรเซสเซอร์นี้มี 16 คอร์ 32 เธรด และความเร็วสัญญาณนาฬิกาพื้นฐานที่ 3.4 GHz ที่สามารถโอเวอร์คล็อกได้สูงสุด 5.4 GHz<br>Ryzen 9 7950X มีประสิทธิภาพที่เหนือกว่าโปรเซสเซอร์รุ่นก่อนอย่าง Ryzen 9 5950X ในแง่ของประสิทธิภาพการทำงานแบบมัลติเธรดถึง 20% โปรเซสเซอร์นี้เหมาะสำหรับงานหนัก เช่น การประมวลผลแบบมัลติเธรด การเรนเดอร์ 3 มิติ และการตัดต่อวิดีโอ                                  </p>
+                                </details>
+                              </p>
+                              <label for="code">code:<input type="text" name="Ryzen_9_7950X" id="Ryzen_9_7950X" placeholder="code" class="m-1 border-1 p-0"></label>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                buy 
+                              </button>
+                              <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <p class = "p1"></p>
+                        </div>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                          <div class="card" style="width: 260px; height : 300;">
+                            <img class="card-img-top w-75  m-0" src="Photo/CPU/Ryzen 9 7900X.jpg" alt="img"><br>
+                            <div class="card-body">
+                              <h5 class="card-title">Ryzen 9 7900<br>(15,000)</h5>
+                              <p class="card-text">use code ("Ryzen 9 7900") -25%</p>
+                              <p class="card-text">
+                                <details>
+                                  <summary>รายละเอียดสินค้า</summary>
+                                  <p>
+                                    Ryzen 9 7900 เป็นซีพียูเดสก์ท็อป 12 คอร์ 24 เธรดจาก AMD ที่ใช้สถาปัตยกรรม Zen 5 รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 5 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.4 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 4.7 GHz<br> Ryzen 9 7900 รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี AMD EXPO™ Technology ซึ่งช่วยให้สามารถขยายหน้าจอไปยังอุปกรณ์ภายนอกได้
+                                    Ryzen 9 7900 เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานระดับมืออาชีพ เช่น การแก้ไขวิดีโอ การเรนเดอร์ 3 มิติ และการเล่นเกมในระดับสูง ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสูงสำหรับงานทั่วไป เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และเล่นเกมระดับกลาง</p>
+                                </details>
+                              </p>
+                              <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0"></label>
+                              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 4px;">
+                                buy 
+                              </button>
+                              <p style="margin-top: 22px;"></p>
+                              <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><br>
+                        <div class="col-sm-6 " style="width: 18rem; margin-top:20px ; ">
+                            <div class="card" style="width: 260px; height : 300;">   
+                              <img class="card-img-top w-75" src="Photo\CPU\Ryzen 7 7850X.jpg" alt="img">
+                              <div class="card-body">
+                                <h5 class="card-title">Ryzen 7 7850X<br>(12,000 Bath)</h5>
+                                <p class="card-text">use code ("Ryzen 7 7850X") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>Ryzen 7 7850X เป็นซีพียูเดสก์ท็อป 8 คอร์ 16 เธรดจาก AMD ที่ใช้สถาปัตยกรรม Zen 5 รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 5 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.6 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.4 GHz
+                                      Ryzen 7 7850X รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี AMD EXPO™ Technology ซึ่งช่วยให้สามารถขยายหน้าจอไปยังอุปกรณ์ภายนอกได้<br>คุณสมบัติหลักของ Ryzen 7 7850X ได้แก่:
+                                      สถาปัตยกรรม Zen 5
+                                      กระบวนการผลิต 5 นาโนเมตร
+                                      8 คอร์ 16 เธรด
+                                      ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.6 GHz
+                                      ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.4 GHz
+                                      รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+                                      รองรับ PCIe 5.0
+                                      รองรับ AMD EXPO™ Technology</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card" style="width: 260px; height : 400;">
+                              <img class="card-img-top" src="Photo/CPU/Ryzen 7 7800X.jpg" alt="img" style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Ryzen 7 7800<br>(9,000 Bath)</h5>
+                                <p class="card-text">use code ("Ryzen 7 7800") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>Ryzen 7 7800 เป็นซีพียูเดสก์ท็อป 8 คอร์ 16 เธรดจาก AMD ที่ใช้สถาปัตยกรรม Zen 4 รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 5 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.5 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz<br>Ryzen 7 7800 รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี AMD EXPO™ Technology ซึ่งช่วยให้สามารถขยายหน้าจอไปยังอุปกรณ์ภายนอกได้
+                                      Ryzen 7 7800 เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับการเล่นเกมและการทำงานทั่วไป ซีพียูสามารถจัดการกับงานหนัก ๆ เช่น การแก้ไขวิดีโอ การเรนเดอร์ 3 มิติ และเกมระดับสูงได้อย่างง่ายดาย                                     
+                                      คุณสมบัติหลักของ Ryzen 7 7800 ได้แก่:
+                                      สถาปัตยกรรม Zen 4
+                                      กระบวนการผลิต 5 นาโนเมตร
+                                      8 คอร์ 16 เธรด
+                                      ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.5 GHz
+                                      ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz
+                                      รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+                                      รองรับ PCIe 5.0
+                                      รองรับ AMD EXPO™ Technology</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><br>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top" src="Photo/CPU/Ryzen 5 7600X.jpg" alt="img" style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">New Ryzen 5 7600X<br>(7,000 Bath)</h5>
+                                <p class="card-text">use code ("Ryzen 5 7600X") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>
+                                      Ryzen 5 7600X เป็นซีพียูเดสก์ท็อป 6 คอร์ 12 เธรดจาก AMD ที่ใช้สถาปัตยกรรม Zen 5 รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 5 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 4.7 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz<br>Ryzen 5 7600X รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี AMD EXPO™ Technology ซึ่งช่วยให้สามารถขยายหน้าจอไปยังอุปกรณ์ภายนอกได้
+                                      Ryzen 5 7600X เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานทั่วไป เช่น การเล่นเกม การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และงานสร้างสรรค์ระดับเริ่มต้น ซีพียูยังเหมาะสำหรับผู้ที่ต้องการอัพเกรดระบบจากซีพียูรุ่นเก่า                                      
+                                      คุณสมบัติหลักของ Ryzen 5 7600X ได้แก่:                                    
+                                      สถาปัตยกรรม Zen 5
+                                      กระบวนการผลิต 5 นาโนเมตร
+                                      6 คอร์ 12 เธรด
+                                      ความเร็วสัญญาณนาฬิกาพื้นฐาน 4.7 GHz
+                                      ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz
+                                      รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+                                      รองรับ PCIe 5.0
+                                      รองรับ AMD EXPO™ Technology</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top" src="Photo/CPU/Ryzen 5 7600.jpg" alt="img" style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Ryzen 5<br>(5,000 Bath)</h5>
+                                <p class="card-text">use code ("Ryzen 5") -25%</p></p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>Ryzen 5 7600 เป็นซีพียูเดสก์ท็อป 6 คอร์ 12 เธรดจาก AMD ที่ใช้สถาปัตยกรรม Zen 5 รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 5 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.8 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.1 GHz <br>Ryzen 5 7600 รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี AMD EXPO™ Technology ซึ่งช่วยให้สามารถขยายหน้าจอไปยังอุปกรณ์ภายนอกได้
+                                      Ryzen 5 7600 เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับการเล่นเกมและการทำงานทั่วไป ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสูงสำหรับงานสร้างสรรค์ เช่น การแก้ไขวิดีโอ การเรนเดอร์ 3 มิติ และการตัดต่อเสียง                                     
+                                      คุณสมบัติหลักของ Ryzen 5 7600 ได้แก่:                                      
+                                      สถาปัตยกรรม Zen 5
+                                      กระบวนการผลิต 5 นาโนเมตร
+                                      6 คอร์ 12 เธรด
+                                      ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.8 GHz
+                                      ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.1 GHz
+                                      รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+                                      รองรับ PCIe 5.0
+                                      รองรับ AMD EXPO™ Technology</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <p style="margin-top: 22px;"></p>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><br>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top" src="Photo/CPU/Ryzen 5 7600X.jpg" alt="img"  style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Ryzen 5 7600X<br>(7,000 Bath)</h5>
+                                <p class="card-text">use code ("Ryzen 5 7600X") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>
+Ryzen 5 7600x เป็นซีพียูเดสก์ท็อป 6 คอร์ 12 เธรดจาก AMD ที่ใช้สถาปัตยกรรม Zen 5 รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 5 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.8 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.1 GHz<br> Ryzen 5 7600x รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี AMD EXPO™ Technology ซึ่งช่วยให้สามารถขยายหน้าจอไปยังอุปกรณ์ภายนอกได้
+Ryzen 5 7600x เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับเกมเมอร์และผู้ใช้ทั่วไปที่ต้องการประสิทธิภาพที่เพียงพอสำหรับงานต่างๆ เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และการแก้ไขภาพถ่าย
+คุณสมบัติหลักของ Ryzen 5 7600 ได้แก่:
+สถาปัตยกรรม Zen 5
+กระบวนการผลิต 5 นาโนเมตร
+6 คอร์ 12 เธรด
+ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.8 GHz
+ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.1 GHz
+รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+รองรับ PCIe 5.0
+รองรับ AMD EXPO™ Technology</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <p style="margin-top: 22px;"></p>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top" src="Photo/CPU/Core i9-13900K.png" alt="img"  style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Core i9-13900K<br>(10,000)</h5>
+                                <p class="card-text">use code ("Core i9-13900K") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>
+                                      Core i9-13900K เป็นซีพียูเดสก์ท็อป 24 คอร์ 32 เธรดจาก Intel ที่ใช้สถาปัตยกรรม Raptor Lake รุ่นใหม่ ผลิตด้วยกระบวนการผลิต Intel 7 ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.0 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.8 GHz <br> Core i9-13900K รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี Intel Thread Director ซึ่งช่วยจัดสรรงานระหว่างคอร์ประสิทธิภาพสูง (P-cores) และคอร์ประสิทธิภาพสูง (E-cores) ได้อย่างมีประสิทธิภาพยิ่งขึ้น
+                                      Core i9-13900K เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานระดับมืออาชีพ เช่น การแก้ไขวิดีโอ การเรนเดอร์ 3 มิติ และการเล่นเกมในระดับสูง ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสูงสำหรับงานทั่วไป เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และเล่นเกมระดับกลาง                                    
+                                      คุณสมบัติหลักของ Core i9-13900K ได้แก่:                                    
+                                      สถาปัตยกรรม Raptor Lake
+                                      กระบวนการผลิต Intel 7
+                                      24 คอร์ 32 เธรด
+                                      ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.0 GHz
+                                      ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.8 GHz
+                                      รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+                                      รองรับ PCIe 5.0
+                                      รองรับเทคโนโลยี Intel Thread Director</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="Ryzen_9_7950X" id="Ryzen_9_7950X" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <p style="margin-top: 22px;"></p>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><br>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card" style="width: 260px; height : 300;">
+                              <img class="card-img-top" src="Photo/CPU/Core i9-13900.jpg" alt="img"  style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Core i9-13900<br>(9,000 Bath)</h5>
+                                <p class="card-text">use code ("Core i9-13900") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>
+Core i9-13900 เป็นซีพียูเดสก์ท็อป 12 คอร์ 24 เธรดจาก Intel ที่ใช้สถาปัตยกรรม Raptor Lake รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 7 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.6 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.6 GHz <br> Core i9-13900 รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี Intel Thread Director ซึ่งช่วยให้สามารถจัดสรรทรัพยากรได้อย่างมีประสิทธิภาพมากขึ้น
+Core i9-13900 เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานระดับมืออาชีพ เช่น การแก้ไขวิดีโอ การเรนเดอร์ 3 มิติ และการเล่นเกมในระดับสูง ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสูงสำหรับงานทั่วไป เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และเล่นเกมระดับกลาง
+คุณสมบัติหลักของ Core i9-13900 ได้แก่:
+สถาปัตยกรรม Raptor Lake
+กระบวนการผลิต 7 นาโนเมตร
+12 คอร์ 24 เธรด
+ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.6 GHz
+ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.6 GHz
+รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+รองรับ PCIe 5.0
+รองรับเทคโนโลยี Intel Thread Director</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="Ryzen_9_7950X" id="Ryzen_9_7950X" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top" src="Photo/CPU/Core i7-13700K.jpg" alt="img"  style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Core i7-13700K<br>(8,000 Bath)</h5>
+                                <p class="card-text">use code ("Core i7-13700K") -25%<p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>
+Core i7-13700K เป็นซีพียูเดสก์ท็อป 8 คอร์ 16 เธรดจาก Intel ที่ใช้สถาปัตยกรรม Raptor Lake รุ่นใหม่ ผลิตด้วยกระบวนการผลิต Intel 7 ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.6 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.4 GHz <br> Core i7-13700K รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี Intel Thread Director ซึ่งช่วยให้สามารถจัดการทรัพยากรได้อย่างมีประสิทธิภาพมากขึ้น
+Core i7-13700K เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานระดับมืออาชีพ เช่น การแก้ไขวิดีโอ การเรนเดอร์ 3 มิติ และการเล่นเกมในระดับสูง ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสูงสำหรับงานทั่วไป เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และเล่นเกมระดับกลาง
+คุณสมบัติหลักของ Core i7-13700K ได้แก่:
+สถาปัตยกรรม Raptor Lake
+กระบวนการผลิต Intel 7
+8 คอร์ 16 เธรด
+ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.6 GHz
+ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.4 GHz
+รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+รองรับ PCIe 5.0
+รองรับเทคโนโลยี Intel Thread Director</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><br>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top m-0" src="Photo/CPU/Core i7-13700.jpg" alt="img" style="width: 240px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Core i7-13700<BR>(6,000 Bath)</h5>
+                                <p class="card-text">use code ("Core i7-13700") -25% </p>
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>Core i7-13700 เป็นซีพียูเดสก์ท็อป 16 คอร์ 24 เธรดจาก Intel ที่ใช้สถาปัตยกรรม Raptor Lake รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 7 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 2.1 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.2 GHz <br> Core i7-13700 รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี Intel Thread Director ซึ่งช่วยจัดสรรงานให้กับคอร์ต่างๆ ได้อย่างมีประสิทธิภาพยิ่งขึ้น
+Core i7-13700 เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานระดับมืออาชีพ เช่น การแก้ไขวิดีโอ การเรนเดอร์ 3 มิติ และการเล่นเกมในระดับสูง ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสูงสำหรับงานทั่วไป เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และเล่นเกมระดับกลาง
+คุณสมบัติหลักของ Core i7-13700 ได้แก่:
+สถาปัตยกรรม Raptor Lake
+กระบวนการผลิต 7 นาโนเมตร
+16 คอร์ 24 เธรด
+ความเร็วสัญญาณนาฬิกาพื้นฐาน 2.1 GHz
+ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.2 GHz
+รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+รองรับ PCIe 5.0
+รองรับเทคโนโลยี Intel Thread Director</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <p style="margin-top: 24px;"></p>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 w-25" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top" src="Photo/CPU/Core i5-13600K.jpg" alt="img" style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Core i5-13600K<br>(5,000 Bath)</h5>
+                                <p class="card-text">use code ("Core i5-13600K") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>
+Core i5-13600K เป็นซีพียูเดสก์ท็อป 14 คอร์ 20 เธรดจาก Intel ที่ใช้สถาปัตยกรรม Raptor Lake รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 7 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 3.5 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz  <br> Core i5-13600K รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี Intel Thread Director ซึ่งช่วยให้สามารถจัดสรรทรัพยากรให้กับเธรดได้อย่างมีประสิทธิภาพมากขึ้น
+Core i5-13600K เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานระดับกลางถึงสูง เช่น การเล่นเกม การแก้ไขวิดีโอ และการเรนเดอร์ 3 มิติ ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสูงสำหรับงานทั่วไป เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และเล่นเกมระดับเริ่มต้น
+คุณสมบัติหลักของ Core i5-13600K ได้แก่:
+สถาปัตยกรรม Raptor Lake
+กระบวนการผลิต 7 นาโนเมตร
+14 คอร์ 20 เธรด
+ความเร็วสัญญาณนาฬิกาพื้นฐาน 3.5 GHz
+ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz
+รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+รองรับ PCIe 5.0
+รองรับเทคโนโลยี Intel Thread Director</p>
+                                  </details>
+                                </p>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 17px;">
+                                  buy 
+                                </button>
+                                <p style="margin-top: 2px;"></p>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><br>
+                        <div class="col-sm-6" style="width: 18rem; margin-top:20px ; ">
+                            <div class="card">
+                              <img class="card-img-top" src="Photo/CPU/Core i5-13600.jpg" alt="img" style="width: 260px;" height="200px">
+                              <div class="card-body">
+                                <h5 class="card-title">Core i5-13600<br>(4,000 Bath)</h5>
+                                <p class="card-text">use code ("Core i5-13600") -25%</p>
+                                <p class="card-text">
+                                  <details>
+                                    <summary>รายละเอียดสินค้า</summary>
+                                    <p>Core i5-13600 เป็นซีพียูเดสก์ท็อป 14 คอร์ 20 เธรดจาก Intel ที่ใช้สถาปัตยกรรม Raptor Lake รุ่นใหม่ ผลิตด้วยกระบวนการผลิต 7 นาโนเมตร ซีพียูมีความเร็วสัญญาณนาฬิกาพื้นฐาน 2.7 GHz และความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz <br> Core i5-13600 รองรับหน่วยความจำ DDR5 สูงสุด 128 GB และ PCIe 5.0 ซีพียูยังรองรับเทคโนโลยี Intel Thread Director ซึ่งช่วยให้ระบบปฏิบัติการสามารถจัดสรรงานไปยังคอร์ที่เหมาะสมได้อย่างมีประสิทธิภาพมากขึ้น
+Core i5-13600 เป็นซีพียูประสิทธิภาพสูงที่เหมาะสำหรับงานระดับกลางถึงระดับสูง เช่น การเล่นเกม การแก้ไขวิดีโอ การตัดต่อภาพ และการเรนเดอร์ 3 มิติ ซีพียูยังเหมาะสำหรับผู้ที่ต้องการระบบที่มีประสิทธิภาพสำหรับงานทั่วไป เช่น การท่องเว็บ การทำงานหลายอย่างพร้อมกัน และเล่นเกมระดับเริ่มต้น
+คุณสมบัติหลักของ Core i5-13600 ได้แก่:
+สถาปัตยกรรม Raptor Lake
+กระบวนการผลิต 7 นาโนเมตร
+14 คอร์ 20 เธรด
+ความเร็วสัญญาณนาฬิกาพื้นฐาน 2.7 GHz
+ความเร็วสัญญาณนาฬิกาบูสต์สูงสุด 5.3 GHz
+รองรับหน่วยความจำ DDR5 สูงสุด 128 GB
+รองรับ PCIe 5.0
+รองรับเทคโนโลยี Intel Thread Director</p>
+                                  </details>
+                                </p>
+                                <label for="code">code:<input type="text" name="codedown" id="codedown" placeholder="code" class="m-1 border-1 p-0" style="margin-bottom: 2px;"></label>
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-top: 1px;">
+                                  buy 
+                                </button>
+                                <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h5 class="modal-title" id="ModalLabel">Alert_buy</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body">
+                                        <iframe src="num1.html" frameborder="0" width="100%" height="100%"></iframe>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div><br>
+                      </div>
+                </div>
+              </div>
+        </div>
+    </div><br>
+    <footer class = " d-flex justify-content-center">
+        <nav aria-label="Page_navigation" >
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#" onclick="say1()">back</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="say1()">1</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="say1()">2</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="say1()">Next</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        let onred = () => {
+            let get1 = document.querySelector("#a1") ;
+            get1.style.cssText = "color: red ;" ;
+        }
+        let buy1 = () => {
+            let show01 = document.getElementsByClassName("p1") ;
+            let con1 = confirm("Buy this ? Y:N") ; 
+            if(con1 != 0 ){
+                alert("buy") ; 
+                show01.innerHTML = '<div class="alert alert-success" role="alert">buy success</div>' ;
+            }else{
+                alert("Not Buy") ; 
+            }
+        }
+        let fun1 = () => {
+          window.location.reload(); 
+        }
+        function say1(){
+          alert("System to Coming soon") ; 
+        }
+        let get1 = () => {
+          alert("At page") ; 
+        }
+    </script>
+</body>
+</html>

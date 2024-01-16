@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- CSS: Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS: Bootstrap v-5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+<body>
+        <main class="m-3">
+            <br>
+            <div class = "container"  style="background-color: aliceblue; border: 2px solid black; border-radius: 8px; width: 50%; " >
+                    <form method="POST" accept-charset="UTF-8" autocomplete="off" name="Data_form" >
+                        <img src="Photo/like.png" alt="like" srcset="" class = "w-50" ><br>
+                        <label for="Name">Name</label><br>
+                        <input type="text" name="Name" id="Name"  aria-describedby="Name" placeholder="Enter Name"><br>
+                        <label for="Email">Email</label><br>
+                        <input type="email" name="Email" id="Email"  aria-describedby="Email" placeholder="Enter Email"><br>
+                        <label for="Money">Money</label><br>
+                        <input type="number" name="Money" id="Money" max = 10000 min = 1000  aria-describedby="Money" placeholder="Enter Money"><br>
+                        <label for="Product">Product</label><br>
+                        <input type="text" name="Product" id="Product"  aria-describedby="Product" placeholder="Enter Product"><br>
+                        <label for="Range">Range</label><br>
+                        <input type="number" name="Range_Product" id="Range_Product" max = 20 min = 1  aria-describedby="Range" placeholder="Enter Range">
+                        <button type="submit" >buy</button>
+                    </form>
+            </div>
+        </main>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyr4fyrYck9cKXN1H3-2_1UBhVL4j0U9xyyjfx4R73sWMhJAwlR-rKMqUYnH9lR3DA/exec'
+            const form = document.forms['Data_form']             
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        let con1 = confirm("You want buy this product"); 
+                        if(con1 == 1){
+                            alert("Thank you! for buy" ); 
+                            alert("Buy sucess product") ; 
+                        }else{
+                            alert("Thank you Serit") ; 
+                        }
+                    })
+                    .then(() => { window.location.reload(); })
+                    .catch(error => console.error('Error!', error.message))
+            })
+            
+        </script>
+</body>
+</html>

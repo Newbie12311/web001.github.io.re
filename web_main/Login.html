@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title> 
+    <link rel="icon" href="coding.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        #icon1{
+            text-align: left;
+        }
+        .se1 {
+            border: 4px solid black;
+            border-radius: 12px;
+        }
+        #bt1 {
+            border: 2px solid black;
+            border-radius: 6px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header class = "contaner-fulid" style = "background-color: rgb(32, 32, 32); border-bottom: 4px solid black;">
+        <img src="Photo\hacker.png" alt = "" width="30px"> <a class = "h5" style="text-decoration: none ;">Anonymous_User for login_computer_shop</a>
+    </header>
+    <main class="m-3">
+        <br>
+        <div class = "container"  style="background-color: aliceblue; border: 2px solid black; border-radius: 8px; width: 50%; " >
+            <form class="form_overlay" method="POST" accept-charset="UTF-8" autocomplete="off" name="data_login">
+                <h4>Login</h4>
+                <div class="form-group">
+                    <label for="InputName">Name</label>
+                    <input type="text" class="form-control" id="Name" name = "Name" aria-describedby="Name" placeholder="Enter Name">
+                  </div>
+                <div class="form-group">
+                  <label for="InputEmail1">Email</label>
+                  <input type="email" class="form-control" id="Email" name = "Email" aria-describedby="Email" placeholder="Enter Email">
+                </div>
+                <div class="form-group" >
+                  <label for="Password">Password</label>
+                  <input type="password" class="form-control" id="Password" name = "Password" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-success" style="margin-top: 8px;" onclick = "link()" id = "bt01">Login</button>
+                <p id ="show"></p>
+            </form>
+        </div>
+    </main>
+    <br>
+    <br>
+    
+   <script>
+    function link(){
+        let link_to = "" ; 
+        let con1 = document.getElementById("Name").value ; 
+        let con2 = document.getElementById("Email").value ; 
+        let con3 = document.getElementById("Password").value ;
+        if(con1 != null){
+            if(con2 != null){
+                if(con3 != null){
+                    alert("Login success") ; 
+                    setTimeout(open("home_shop.html"), 2000) ; 
+                }else{
+                    alert("Not Passwords");
+                }
+            }else{
+                alert("Not Eamil") ; 
+            }
+        }else{
+            alert("Not Name") ; 
+        }
+    }
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx7CaVkWqWCkJ9MeO9FRL7VqEmDi7bf1AwxqpvkNaqSh3nGN26yYVyjBjbAfcIlLUyr/exec'
+    const form = document.forms['data_login'] 
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => document.getElementById("show").innerHTML = "<div class='alert alert-success' role='alert'><b>Thank You Login Confirm</b></div>",data_login.reset())
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+</body>
+</html>
